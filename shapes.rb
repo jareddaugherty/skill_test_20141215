@@ -31,7 +31,7 @@ end
 
 class Shape
   include ShapeParser
-  attr_reader :type, :length
+  attr_reader :type, :length, :area, :perimeter
 
   def initialize(args={})
     @length = args[:length].to_f
@@ -40,7 +40,7 @@ class Shape
   end
 
   def print_shape_info(args={})
-    puts "Shape #{args[:shape_number]} is a #{self.class}, with a length of #{self.length}, having a perimeter of #{self.shape_perimeter}, and an area of #{self.shape_area} units square"
+    puts "Shape #{args[:shape_number]} is a #{self.class}, with a length of #{self.length}, having a perimeter of #{self.perimeter}, and an area of #{self.area} units square"
   end
 end
 
