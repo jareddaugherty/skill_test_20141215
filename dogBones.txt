@@ -1,0 +1,9 @@
+#Question 2:
+
+SELECT name, COUNT(Bones.id), AVG(rating)
+FROM Dogs LEFT JOIN Bones ON (Dogs.id=dog_id)
+GROUP BY(Dogs.name);
+
+Dogs.find(joins: "LEFT JOIN 'bones' ON dogs.id = bones.dog_id").select(dogs.name, count(bones.id), avg(bones.rating)).group(dogs.name)
+
+
